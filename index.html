@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Application</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header class="container">
+        <img class="logo" src="./img/logo.png" alt="Your library">
+        <div class="slogan">
+            <h1>Your Library</h1>
+            <h5>Find interesting for reading</h5>
+        </div>
+    </header>
+    <main class="content container">
+        <div class="left">
+            <h2>Here you can add a new book:</h2>
+            <div id="form">
+                <div class="form__item">
+                    <div class="label">ISBN</div>
+                    <input type="text" id="isbn" data-name="ISBN">
+                </div>
+                <div class="form__item">
+                    <div class="label">Title of book</div>
+                    <input type="text" id="title" data-name="Title">
+                </div>
+                <div class="form__item">
+                    <div class="label">Author</div>
+                    <input type="text" id="author" data-name="Author">
+                </div>
+                <div class="form__item">
+                    <div class="label">Year of publishing</div>
+                    <input type="text" id="year" data-name="Year of publishing">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="add">Add book</button>
+                <button id="print">Print all books</button>
+            </div>
+            <div class="oldnew hidden">
+                <h3>Oldest book:</h3>
+                <p id="oldest"></p>
+                <h3>Newest book:</h3>
+                <p id="newest"></p>
+            </div>
+        </div>
+        <div class="right hidden">
+            <h2>List of our books:</h2>
+            <ol id="allBooks"></ol>
+        </div>
+    </main>
+
+    
+</body>
+</html>
