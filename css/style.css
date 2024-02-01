@@ -32,6 +32,10 @@ header{
     margin-bottom: 30px !important;
 }
 
+.slogan h5{
+    text-transform: uppercase;
+}
+
 .logo{
     max-width: 150px;
 }

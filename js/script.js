@@ -1,6 +1,7 @@
 const library = [];
-const tempArr = [];
+const tempArr = []; // Created a temporary array in which we will save books until we press button Print books
 let isBlocksHidden = true;
+const todayYear = new Date().getFullYear();
 
 const addButton = document.getElementById("add");
 const printButton = document.getElementById("print");
@@ -51,9 +52,6 @@ printButton.addEventListener('click', e => {
         }
         
         printOldestAndNewest();
-
-        console.log('Oldest one  = ' + findOldestBook())
-        console.log('Newest one  = ' + findNewestBook())
     } 
 });
 
@@ -120,12 +118,14 @@ function printOldestAndNewest (){
 
 
 yearInput.oninput = function () {
-    this.value = this.value.replace(/[^\d]/g, '');
+    this.value = this.value.replace(/[^\d]/g, ''); // Accept only numbers
     if (this.value.length > 4) {
-        this.value = this.value.substring(0, 4);
+        this.value = this.value.substring(0, 4); // Maximal length = 4
     }
-    const date = new Date();
-    if (+this.value > date.getFullYear()) {
-        this.value = date.getFullYear();
+    
+    if (+this.value > todayYear) {
+        this.value = todayYear; // Not allowing to set year greater than current year
     }
 };
+
+// TODO some notification, when we added a book (to show user, that book was added)
